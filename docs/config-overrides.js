@@ -20,16 +20,16 @@ module.exports = override(
     config.resolve.plugins[1] = new ModuleScopePlugin([ paths.appSrc, pathPackages ], [ paths.appPackageJson ])
 
     return config
-  }, 
+  },
   addWebpackAlias({
     ...aliases,
-    '@grovertb/material'  : path.resolve(__dirname, '../packages/cui-material/src'),
-    'react-dom'        : '@hot-loader/react-dom'
+    '@grovertb/material': path.resolve(__dirname, '../packages/cui-material/src'),
+    'react-dom'         : '@hot-loader/react-dom'
   }),
   addBabelPlugin([
     'babel-plugin-module-resolver', {
       alias: {
-        '@grovertb/material'  : path.resolve(__dirname, '../packages/cui-material/src'),
+        '@grovertb/material': path.resolve(__dirname, '../packages/cui-material/src')
       },
       transformFunctions: [ 'require', 'require.context' ]
     }

@@ -80,9 +80,10 @@
     "react/jsx-uses-vars": ["error"],
     "import/no-anonymous-default-export": [2, {"allowArrowFunction": true}],
     "react/react-in-jsx-scope": 0,
+    "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
-      { "vars": "local", "args": "after-used", "ignoreRestSiblings": false }
+      { "ignoreRestSiblings": true }
     ],
     "no-empty": [
       2,
