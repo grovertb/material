@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "docs:start": "yarn workspace docs start"
+  },
+  "workspaces": [
+    "packages/*",
+    "docs"
+  ],
+  "devDependencies": {
+    "@babel/cli": "7.15.4",
+    "@babel/plugin-transform-object-assign": "7.14.5",
+    "@rollup/plugin-commonjs": "20.0.0",
+    "@rollup/plugin-replace": "3.0.0",
+    "babel-plugin-react-remove-properties": "0.3.0",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-node-globals": "1.4.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-size-snapshot": "0.12.0",
+    "rollup-plugin-terser": "7.0.2"
+  }
+}

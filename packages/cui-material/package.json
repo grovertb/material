@@ -1,0 +1,50 @@
+{
+  "name": "@grovertb/material",
+  "version": "0.0.1",
+  "private": false,
+  "author": "GroverTB",
+  "description": "React components that implement Google's Material Design.",
+  "main": "./src/index.js",
+  "keywords": [
+    "react",
+    "react-component",
+    "material design",
+    "material-ui",
+    "chicho-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grovertb/cui.git",
+    "directory": "packages/cui"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grovertb/cui/issues"
+  },
+  "scripts": {
+    "build": "yarn build:legacy && yarn build:modern && yarn build:node && yarn build:stable && yarn build:umd && yarn build:copy-files",
+    "build:legacy": "NODE_ENV=production BABEL_ENV=legacy babel --config-file ../../babel.config.js ./src --out-dir ./build/legacy --ignore \"**/*.test.js\"",
+    "build:modern": "NODE_ENV=production BABEL_ENV=modern babel --config-file ../../babel.config.js ./src --out-dir ./build/modern --ignore \"**/*.test.js\"",
+    "build:node": "NODE_ENV=production BABEL_ENV=node babel --config-file ../../babel.config.js ./src --out-dir ./build/node --ignore \"**/*.test.js\"",
+    "build:stable": "NODE_ENV=production BABEL_ENV=stable babel --config-file ../../babel.config.js ./src --out-dir ./build --ignore \"**/*.test.js\"",
+    "build:umd": "BABEL_ENV=stable rollup -c scripts/rollup.config.js",
+    "build:copy-files": "node ../../scripts/copy-files.js",
+    "prebuild": "rimraf build",
+    "release": "yarn build && npm publish ./build --tag latest"
+  },
+  "dependencies": {
+    "@emotion/react": "11.4.1",
+    "@emotion/styled": "11.3.0",
+    "@mui/material": "^5.0.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "7.15.0",
+    "@babel/preset-typescript": "7.15.0",
+    "babel-plugin-optimize-clsx": "2.6.2",
+    "rollup": "2.56.3"
+  }
+}
