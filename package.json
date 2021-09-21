@@ -1,8 +1,9 @@
 {
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "scripts": {
-    "docs:start": "yarn workspace docs start"
+    "docs:start": "yarn workspace docs start",
+    "lint-staged": "lint-staged"
   },
   "workspaces": [
     "packages/*",
@@ -22,11 +23,6 @@
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-size-snapshot": "0.12.0",
     "rollup-plugin-terser": "7.0.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
