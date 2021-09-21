@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
-  "private": false,
+  "private": true,
   "scripts": {
     "docs:start": "yarn workspace docs start",
     "lint-staged": "lint-staged",
