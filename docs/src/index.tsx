@@ -1,33 +1,9 @@
 import ReactDOM from 'react-dom'
-import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { ThemeProvider, createTheme } from '@grovertb/material'
-
-const theme = createTheme({
-  status: {
-    danger: '#f4ff22'
-  }
-})
-
-declare module '@mui/material/styles' {
-  interface Theme {
-    status: {
-      danger: string;
-    };
-  }
-  // allow configuration using `createTheme`
-  interface ThemeOptions {
-    status?: {
-      danger?: string;
-    };
-  }
-}
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <App />
-  </ThemeProvider>,
+  <App />,
   document.getElementById('root')
 )
 

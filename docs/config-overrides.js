@@ -18,6 +18,7 @@ module.exports = override(
   config => {
     const pathPackages = path.join(process.cwd(), '..', 'packages')
     config.resolve.plugins[1] = new ModuleScopePlugin([ paths.appSrc, pathPackages ], [ paths.appPackageJson ])
+    config.module.rules[1].oneOf[2].include = [ config.module.rules[1].oneOf[2].include, pathPackages ]
 
     return config
   },

@@ -3,18 +3,23 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@grovertb/material": "0.0.1",
     "@hot-loader/react-dom": "17.0.1",
+    "@loadable/component": "5.15.0",
+    "@mui/icons-material": "5.0.0",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.1.0",
     "@testing-library/user-event": "13.2.1",
-    "@types/jest": "27.0.1",
-    "@types/node": "16.9.2",
-    "@types/react": "17.0.21",
+    "@types/jest": "27.0.2",
+    "@types/node": "16.9.4",
+    "@types/react": "17.0.22",
     "@types/react-dom": "17.0.9",
+    "@types/react-router-dom": "5.3.0",
     "customize-cra": "1.0.0",
     "react": "17.0.2",
     "react-app-rewired": "2.1.8",
     "react-dom": "17.0.2",
+    "react-router-dom": "5.3.0",
     "react-scripts": "4.0.3",
     "typescript": "4.4.3",
     "web-vitals": "2.1.0"
@@ -38,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@types/loadable__component": "5.13.4",
     "babel-plugin-module-resolver": "4.1.0"
   }
 }

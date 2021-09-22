@@ -190,5 +190,9 @@
         "ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\("
       }
     ]
+  },
+  "globals": {
+    "JSX": true,
+    "React": true
   }
 }
