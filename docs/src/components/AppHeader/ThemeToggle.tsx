@@ -1,5 +1,4 @@
-import IconButton from '@mui/material/IconButton'
-import Tooltip from '@mui/material/Tooltip'
+import { Tooltip, IconButton } from '@grovertb/material'
 import { DarkModeOutlined as DarkModeOutlinedIcon, LightModeOutlined as LightModeOutlinedIcon } from '@mui/icons-material'
 
 const ThemeModeToggle = (props: { checked: boolean; onChange: (checked: boolean) => void }) => (

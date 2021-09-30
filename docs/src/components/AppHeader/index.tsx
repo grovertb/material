@@ -1,11 +1,19 @@
-import { AppBar, Toolbar } from '@mui/material'
-import { styled } from '@mui/material/styles'
+import { Box, IconButton, AppBar, Toolbar, styled } from '@grovertb/material'
+import { Menu as MenuIcon } from '@mui/icons-material'
 
 import ThemeModeToggle from './ThemeToggle'
 
-const AppHeader = (props: { checked: boolean; onHandleChangeThemeMode: (checked: boolean) => void }) => (
+const AppHeader = (props: { checked: boolean, onHandleToggleDrawer: () => void, onHandleChangeThemeMode: (checked: boolean) => void }) => (
   <Header color='default'>
     <Toolbar>
+      <Box flexGrow={1}>
+        <IconButton
+          color='inherit'
+          edge='start'
+          onClick={props.onHandleToggleDrawer}>
+          <MenuIcon />
+        </IconButton>
+      </Box>
       <ThemeModeToggle
         checked={props.checked}
         onChange={props.onHandleChangeThemeMode} />

@@ -15,7 +15,6 @@ const createRoutes = () => (
   <BrowserRouter>
     <Main>
       <Switch>
-        <Route component={Home} path='/' />
         {
           getPaths(pages).map((path: string, index: number) => (
             <Route
@@ -24,6 +23,7 @@ const createRoutes = () => (
               path={path} />
           ))
         }
+        <Route component={Home} path='/' />
       </Switch>
     </Main>
   </BrowserRouter>
